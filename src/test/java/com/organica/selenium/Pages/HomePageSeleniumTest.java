@@ -52,17 +52,15 @@ public class HomePageSeleniumTest {
         Assertions.assertTrue(productList.isDisplayed(), "Product list should be visible on the page");
     }
 
-//    @Test
-//    void testBackToTopButton() {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        WebElement backToTopButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".back-to-top")));
-//
-//        backToTopButton.click();
-//
-//        wait.until(ExpectedConditions.stalenessOf(backToTopButton)); // Wait for button to disappear (as a result of scrolling)
-//
-//        Assertions.assertTrue(driver.getCurrentUrl().contains("http://localhost:3000/#top"), "The page should be at the top");
-//    }
+    @Test
+    void testBackToTopButton() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement backToTopButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".back-to-top")));
+
+        backToTopButton.click();
+
+        Assertions.assertTrue(driver.getCurrentUrl().contains("http://localhost:3000/#top"), "The page should be at the top");
+    }
 
     @Test
     void testFooterIsVisible() {

@@ -56,8 +56,6 @@ public class ShopPageSeleniumTest {
 //
 //        backToTopButton.click();
 //
-//        wait.until(ExpectedConditions.stalenessOf(backToTopButton)); // Wait for the button to disappear (after scrolling)
-//
 //        Assertions.assertTrue(driver.getCurrentUrl().contains("http://localhost:3000/shop"), "The page should be at the top");
 //    }
 
